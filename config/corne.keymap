@@ -57,7 +57,7 @@
 // |Green|     |     |     |     |     |   |     |     |     |  [  |  ]  |    |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
-   &kp ESC       &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &ext_power EP_TOG
+   &kp TILDE     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &ext_power EP_TOG
    &trans        &trans    &trans  &trans    &trans    &trans        &trans    &trans   &trans    &kp LBRC &kp RBRC &rgb_ug RGB_TOG
    &rgb_ug GREEN &trans    &trans  &trans    &trans    &trans        &trans    &trans   &trans    &kp LBKT &kp RBKT &trans
                                    &trans    &trans    &trans        &trans    &trans   &trans
