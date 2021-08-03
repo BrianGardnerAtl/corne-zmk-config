@@ -53,8 +53,8 @@
                 LAYER2 {
 // -----------------------------------------------------------------------------------------
 // |  ~  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  EP TOG  |
-// |     |     |     |     |     |     |   |     |     |     |  {  |  }  |    |
-// |Green|     |     |     |     |     |   |     |     |     |  [  |  ]  |    |
+// |     |     |     |     |     |     |   |     |     |     |  {  |  }  |  RGB TOG |
+// |Green|     |     |     |     |     |   |     |     |     |  [  |  ]  |          |
 //                   |     |     |     |   |     |     |     |
                         bindings = <
    &kp TILDE     &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT     &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR &ext_power EP_TOG
@@ -66,15 +66,15 @@
 
                 LAYER3 {
 // -----------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2  | BT3  | BT4  | BT5 |   |     |     |     |     |     | BOOTLOADER |
-// |       |     | VOLD | VOLU | MUTE |     |   | LFT | DWN |  UP | RGT |     | RESET      |
-// |       |     |      |      |      |     |   |     |     |     |     |     |            |
-//                      |      |      |     |   |     |     |     |
+// | BTCLR | BT1 | BT2  | BT3  | BT4  | BT5 |   | EP ON | EP OFF | RGB TOG |     |     | BOOTLOADER |
+// |       |     | VOLD | VOLU | MUTE |     |   | LFT   | DWN    |  UP     | RGT |     | RESET      |
+// |       |     |      |      |      |     |   |       |        |         |     |     |            |
+//                      |      |      |     |   |       |        |         |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans   &trans   &trans &trans    &trans &bootloader
-   &trans     &trans       &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &trans          &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &reset
-   &trans     &trans       &trans       &trans       &trans       &trans          &trans   &trans   &trans &trans    &trans &trans
-                                        &trans       &trans       &trans          &trans   &trans   &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &ext_power EP_ON &ext_power EP_OFF   &rgb_ug RGB_TOG &trans    &trans &bootloader
+   &trans     &trans       &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &trans          &kp LEFT         k&kp DOWN &kp UP &kp RIGHT &trans &reset
+   &trans     &trans       &trans       &trans       &trans       &trans          &trans             &trans   &trans &trans    &trans &trans
+                                        &trans       &trans       &trans          &trans             &trans   &trans
                         >;
                 };
         };
