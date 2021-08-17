@@ -15,9 +15,6 @@
 #define LAYER2 2
 #define LAYER3 3
 
-// Colors
-#define GREEN RGB_COLOR_HSB(128, 100, 100)
-
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -66,15 +63,15 @@
 
                 LAYER3 {
 // -----------------------------------------------------------------------------------------
-// | BTCLR | BT1 | BT2  | BT3  | BT4  | BT5 |   |     |     |      |     |     | BOOTLOADER |
-// |       |     | VOLD | VOLU | MUTE |     |   | LFT | DWN |  UP  | RGT |     | RESET      |
-// |       |     |      |      |      |     |   |     |     |      |     |     |            |
-//                      |      |      |     |   |     |     |      |
+// | BTCLR | BT1 | BT2  | BT3  | BT4  | BT5 |   |       |     |      |     |     |       |
+// |       |     | VOLD | VOLU | MUTE |     |   | LFT   | DWN |  UP  | RGT |     | RESET |
+// |       |     |      |      |      |     |   |       |     |      |     |     |       |
+//                      |      |      |     |   | BTLDR |     |      |
                         bindings = <
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans    &trans    &trans  &trans    &trans &bootloader
-   &trans     &trans       &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &trans          &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT &trans &reset
-   &trans     &trans       &trans       &trans       &trans       &trans          &trans    &trans    &trans  &trans    &trans &trans
-                                        &trans       &trans       &trans          &trans    &trans    &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans      &trans    &trans  &trans    &trans &trans
+   &trans     &trans       &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &trans          &kp LEFT    &kp DOWN  &kp UP  &kp RIGHT &trans &reset
+   &trans     &trans       &trans       &trans       &trans       &trans          &trans      &trans    &trans  &trans    &trans &trans
+                                        &trans       &trans       &trans          &bootloader &trans    &trans
                         >;
                 };
         };
